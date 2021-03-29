@@ -68,6 +68,16 @@ ou
 npx react-native run-android
 ```
 
+## Rodando os testes 🧪
+
+Para rodar os testes basta executar:
+
+```sh
+yarn test
+#ou
+npm run test
+```
+
 ## Frameworks e Libs 🛠
 
 - React
