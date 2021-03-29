@@ -2,7 +2,7 @@ import { store } from '../store';
 
 const defaultOptions = {
   headers: {
-    Authorization: 'token a6d9f8c56044d45875ae3767c557c87a7c1e28bb',
+    // Authorization: 'token ', ative caso tenha timeout (gere um token no github)
   },
 };
 
