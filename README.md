@@ -14,6 +14,7 @@
 ## Sobre 📖
 
 Repositorio para o desafio da [GO.K](https://gok.digital/) contendo o projeto Mobile Multiplataforma (Android e Ios) em React Native.
+OBS: Aplicação foi desenvolvida no emulador de IOS.
 
 Versão do nodejs: 14 ou superior.
 
