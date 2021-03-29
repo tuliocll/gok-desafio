@@ -1,4 +1,4 @@
-# Summaryze Forem 📑
+# Desafio GO.K 📱
 
 <p align="center">
   <img src="https://blog.gok.digital/wp-content/uploads/2020/07/Bitmap.png" width="300" style="border-radius: 6px">
