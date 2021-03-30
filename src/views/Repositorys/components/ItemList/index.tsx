@@ -48,9 +48,9 @@ const ItemList = ({
   }
 
   return (
-    <Container onPress={itemClick}>
-      <Card>
-        <Row style={{ marginTop: 15 }}>
+    <Card>
+      <Container onPress={itemClick}>
+        <Row>
           <Col style={{ width: '93%' }}>
             <Row>
               <Col style={{ marginTop: 10 }}>
@@ -116,8 +116,8 @@ const ItemList = ({
             iconName="clock-outline"
           />
         </Row>
-      </Card>
-    </Container>
+      </Container>
+    </Card>
   );
 };
 

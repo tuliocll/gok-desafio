@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Platform } from 'react-native';
 import useDebounce from '../../hooks/useDebounce';
 
 import { Container, Icon, TextInput } from './style';
@@ -43,7 +44,7 @@ export const Search = ({
   }
 
   return (
-    <Container testID={testID}>
+    <Container testID={testID} ios={Platform.OS === 'ios'}>
       <Icon name={filter ? 'filter-variant' : 'magnify'} />
       <TextInput
         placeholder="Buscar um repositório..."

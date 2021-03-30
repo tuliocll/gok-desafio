@@ -22,7 +22,7 @@ import { store, persistor } from './store';
 const App = (): React.ReactElement => {
   return (
     <NavigationContainer ref={navigationRef}>
-      <SafeAreaView style={{ flex: 1 }}>
+      <SafeAreaView style={{ flex: 1, backgroundColor: '#fff' }}>
         <Provider store={store}>
           <PersistGate persistor={persistor}>
             <Routes />

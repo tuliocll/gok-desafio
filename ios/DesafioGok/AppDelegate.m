@@ -53,14 +53,6 @@ static void InitializeFlipper(UIApplication *application) {
 - (NSURL *)sourceURLForBridge:(RCTBridge *)bridge
 {
 #if DEBUG
-  for (NSString* family in [UIFont familyNames])
-  {
-    NSLog(@"%@", family);
-    for (NSString* name in [UIFont fontNamesForFamilyName: family])
-    {
-      NSLog(@" %@", name);
-    }
-  }
   return [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
 #else
   return [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];

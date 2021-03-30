@@ -173,8 +173,8 @@ const Repositories = (): React.ReactElement => {
         <Col>
           {filterEnabled ? (
             <>
-              <Row>
-                <Col style={{ width: '15%', marginRight: 8 }}>
+              <Row style={{ paddingLeft: 10 }}>
+                <Col style={{ width: '15%', marginRight: 5 }}>
                   <SearchButton onPress={changeSearchBar} />
                 </Col>
                 <Col style={{ width: '82%' }}>
@@ -187,6 +187,7 @@ const Repositories = (): React.ReactElement => {
                   marginTop: 10,
                   marginBottom: 10,
                   height: 30,
+                  paddingLeft: 5,
                 }}
                 contentContainerStyle={{
                   width: filterSearch.length === 0 ? '100%' : 'auto',
@@ -212,7 +213,7 @@ const Repositories = (): React.ReactElement => {
             </>
           ) : (
             <Row>
-              <Col style={{ width: '82%' }}>
+              <Col style={{ width: '82%', paddingLeft: 10 }}>
                 <Search
                   testID="search-repo"
                   onTextChange={onSearch}

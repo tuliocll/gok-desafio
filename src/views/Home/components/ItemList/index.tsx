@@ -41,8 +41,8 @@ const ItemList = ({
   }
 
   return (
-    <Container onPress={itemClick}>
-      <Card>
+    <Card>
+      <Container onPress={itemClick}>
         <Row style={{ marginTop: 15 }}>
           <Col style={{ width: '93%' }}>
             <Row>
@@ -74,8 +74,8 @@ const ItemList = ({
           />
           <Label text={data.followers} iconName="star" />
         </Row>
-      </Card>
-    </Container>
+      </Container>
+    </Card>
   );
 };
 

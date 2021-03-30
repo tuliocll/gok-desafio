@@ -1,5 +1,5 @@
 import React from 'react';
-import { GestureResponderEvent } from 'react-native';
+import { GestureResponderEvent, Platform } from 'react-native';
 
 import { Icon, Container } from './style';
 
@@ -11,7 +11,7 @@ export const FilterButton = ({
   onPress,
 }: IFilterButton): React.ReactElement => {
   return (
-    <Container onPress={onPress}>
+    <Container onPress={onPress} ios={Platform.OS === 'ios'}>
       <Icon name="filter-variant" />
     </Container>
   );
