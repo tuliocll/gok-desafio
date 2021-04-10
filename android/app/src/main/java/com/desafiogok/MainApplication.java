@@ -11,6 +11,9 @@ import com.facebook.soloader.SoLoader;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
+import com.newrelic.agent.android.NewRelic;
+
+
 public class MainApplication extends Application implements ReactApplication {
 
   private final ReactNativeHost mReactNativeHost =
@@ -45,6 +48,7 @@ public class MainApplication extends Application implements ReactApplication {
     super.onCreate();
     SoLoader.init(this, /* native exopackage */ false);
     initializeFlipper(this, getReactNativeHost().getReactInstanceManager());
+    NewRelic.withApplicationToken(BuildConfig.NEW_RELIC_TOKEN).start(this.getApplicationContext());
   }
 
   /**

@@ -120,6 +120,18 @@ def jscFlavor = 'org.webkit:android-jsc:+'
  */
 def enableHermes = project.ext.react.get("enableHermes", false);
 
+repositories {
+    jcenter()
+}
+
+apply plugin: 'newrelic'
+
+def getNewRelicApi() {
+    Properties properties = new Properties()
+    properties.load(project.rootProject.file('local.properties').newDataInputStream())
+    return properties.getProperty("NEW_RELIC_TOKEN");
+}
+
 android {
     ndkVersion rootProject.ext.ndkVersion
 
@@ -136,6 +148,7 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+        buildConfigField "String", "NEW_RELIC_TOKEN", "\""+getNewRelicApi()+"\""
     }
     splits {
         abi {
@@ -183,12 +196,16 @@ android {
     }
 }
 
+
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     //noinspection GradleDynamicVersion
     implementation "com.facebook.react:react-native:+"  // From node_modules
 
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
+
+    implementation 'com.newrelic.agent.android:android-agent:6.0.0'
+
 
     debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}") {
       exclude group:'com.facebook.fbjni'

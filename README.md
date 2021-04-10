@@ -51,6 +51,12 @@ cd ios && pod install
 cd ..
 ```
 
+### Opcional
+
+- #### Configure o token do New Relic:
+- - #### Android:
+- - - Vá até a pasta Android, copie e renomei o arquivo `local.properties.example` para `local.properties` e adicione seu token.
+
 ## Rodando o projeto ⚛️
 
 Para executar o aplicativo basta rodar o comando escolhendo a plataforma desejada:

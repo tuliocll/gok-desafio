@@ -86,7 +86,7 @@ const Repositories = (): React.ReactElement => {
     const normalizedFilter = filterSearch.map(filter => filter.toLowerCase());
 
     const filtered: Array<IRepository> = [];
-    userRepos.data.forEach(item => {
+    userRepos?.data.forEach(item => {
       item?.tags?.forEach(tag => {
         if (normalizedFilter.includes(tag.toLowerCase().replace(/^#/, ''))) {
           const check = filtered.some(filter => filter.id === item.id);
